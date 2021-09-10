@@ -16,4 +16,4 @@ data class CompanyItem(
     @SerializedName("introPath")
     var introPath: String? = null
 
-)
+): HomeRecyclerItem
