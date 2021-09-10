@@ -20,7 +20,9 @@ data class ConsultItem(
     var answerCnt: Int? = null,
 
     @SerializedName("tagList")
-    var tagList: List<DocTag>? = null
+    var tagList: List<DocTag>? = null,
+
+    val viewType: Int = 0
 
 ): HomeRecyclerItem
 

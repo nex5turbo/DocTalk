@@ -18,4 +18,4 @@ data class ExpertItem(
     @SerializedName("typeName")
     var typeName: String? = null
 
-): HomeRecyclerItem
+)

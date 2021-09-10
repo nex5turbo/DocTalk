@@ -5,6 +5,7 @@ import com.young.test2.home.HomeRecyclerItem
 
 data class ExpertList(
     @SerializedName("expertList")
-    var expertList: List<ExpertItem>? = null
+    var expertList: List<ExpertItem>? = null,
 
+    val viewType: Int = 1
 ): HomeRecyclerItem
