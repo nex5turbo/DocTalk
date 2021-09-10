@@ -16,10 +16,10 @@ data class ResponseHome(
     var consultList: List<ConsultItem>? = null,
 
     @SerializedName("expertList")
-    var expertList: ExpertList? = null,
+    var expertList: List<ExpertItem>? = null,
 
     @SerializedName("companyList")
-    var companyList: CompanyList? = null
+    var companyList: List<CompanyItem>? = null
 ){
     data class PageMap(
         @SerializedName("pageNumber")
