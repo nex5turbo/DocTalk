@@ -1,10 +1,10 @@
-package com.young.test2.home
+package com.young.test2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import com.young.test2.R
 import com.young.test2.databinding.ActivityMainBinding
+import com.young.test2.home.HomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var _binding: ActivityMainBinding
