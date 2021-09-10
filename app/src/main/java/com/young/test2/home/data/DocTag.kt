@@ -1,4 +1,4 @@
-package com.young.test2
+package com.young.test2.home.data
 
 import com.google.gson.annotations.SerializedName
 

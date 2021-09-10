@@ -3,7 +3,7 @@
     <data>
         <variable
             name="viewModel"
-            type="com.young.test2.HomeFragment" />
+            type="com.young.test2.home.HomeFragment" />
     </data>
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"

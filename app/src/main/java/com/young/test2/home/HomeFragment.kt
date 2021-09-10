@@ -1,4 +1,4 @@
-package com.young.test2
+package com.young.test2.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.young.test2.R
 import com.young.test2.databinding.FragmentHomeBinding
 
 class HomeFragment: Fragment() {

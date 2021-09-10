@@ -1,10 +1,9 @@
-package com.young.test2
+package com.young.test2.home
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
-import com.google.android.material.bottomnavigation.BottomNavigationItemView
-import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.young.test2.R
 import com.young.test2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
