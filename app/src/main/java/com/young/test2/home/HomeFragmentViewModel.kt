@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.young.test2.home.data.CompanyList
 import com.young.test2.home.data.ExpertList
+import com.young.test2.home.data.HomeRecyclerItem
 import com.young.test2.repository.RemoteDataSourceImpl
 import kotlin.collections.ArrayList
 
@@ -38,12 +39,11 @@ class HomeFragmentViewModel: ViewModel(){
                             resultList.add(companyList)
                             index++
                         }
-
+                        consult.dateToString()
                         resultList.add(consult)
                         index++
                     }
                     _homeItemList.value = resultList
-
                 }
             },
             onFailure = {

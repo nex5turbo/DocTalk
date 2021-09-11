@@ -13,13 +13,13 @@ data class ResponseHome(
     var companyListPosition: Int? = null,
 
     @SerializedName("consultList")
-    var consultList: List<ConsultItem>? = null,
+    var consultList: ArrayList<ConsultItem>? = null,
 
     @SerializedName("expertList")
-    var expertList: List<ExpertItem>? = null,
+    var expertList: ArrayList<ExpertItem>? = null,
 
     @SerializedName("companyList")
-    var companyList: List<CompanyItem>? = null
+    var companyList: ArrayList<CompanyItem>? = null
 ){
     data class PageMap(
         @SerializedName("pageNumber")

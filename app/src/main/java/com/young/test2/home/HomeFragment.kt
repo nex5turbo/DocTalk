@@ -11,6 +11,7 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.young.test2.R
 import com.young.test2.databinding.FragmentHomeBinding
+import com.young.test2.home.recyclerview.HomeRecyclerAdapter
 
 class HomeFragment: Fragment() {
     private lateinit var _binding: FragmentHomeBinding
@@ -23,13 +24,9 @@ class HomeFragment: Fragment() {
     ): View? {
         _binding = DataBindingUtil.inflate(inflater, R.layout.fragment_home, container, false)
         val viewModel = ViewModelProvider(this).get(HomeFragmentViewModel::class.java)
-        _binding.viewModel = viewModel
 
-        viewModel.homeItemList.observe(this, Observer {
-            for (i in it) {
-                Log.d("###", i.toString())
-            }
-        })
+        _binding.viewModel = viewModel
+        _binding.lifecycleOwner = this
 
         return _binding.root
     }

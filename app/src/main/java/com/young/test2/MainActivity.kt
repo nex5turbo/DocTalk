@@ -1,5 +1,6 @@
 package com.young.test2
 
+import android.content.pm.ActivityInfo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
@@ -11,6 +12,7 @@ class MainActivity : AppCompatActivity() {
     val homeFragment = HomeFragment()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT)
         _binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
 
         _binding.bottomNavigationView.setOnNavigationItemSelectedListener {
