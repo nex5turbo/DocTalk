@@ -10,4 +10,6 @@
 
     <color name="main_green">#FF06B100</color>
     <color name="dark_green">#FF036100</color>
+
+    <color name="gray">#FFEAEAEA</color>
 </resources>
