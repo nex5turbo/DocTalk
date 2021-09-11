@@ -1,7 +1,8 @@
 package com.young.test2.home.data
 
 import com.google.gson.annotations.SerializedName
-import com.young.test2.home.HomeRecyclerItem
+import java.text.SimpleDateFormat
+import java.util.*
 
 data class ConsultItem(
     @SerializedName("seq")
@@ -22,7 +23,16 @@ data class ConsultItem(
     @SerializedName("tagList")
     var tagList: List<DocTag>? = null,
 
-    val viewType: Int = 0
+    var regDateString: String? = null,
 
-): HomeRecyclerItem
+    override var viewType: Int = 0
+
+): HomeRecyclerItem {
+    fun dateToString() {
+        if (regDate == null) return
+        val date = Date(regDate!!)
+        val format = SimpleDateFormat("yyyy.MM.dd")
+        regDateString = format.format(date)
+    }
+}
 
