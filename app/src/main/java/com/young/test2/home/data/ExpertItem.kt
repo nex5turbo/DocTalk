@@ -1,6 +1,5 @@
 package com.young.test2.home.data
 import com.google.gson.annotations.SerializedName
-import com.young.test2.home.HomeRecyclerItem
 
 data class ExpertItem(
     @SerializedName("companyName")
@@ -18,4 +17,4 @@ data class ExpertItem(
     @SerializedName("typeName")
     var typeName: String? = null
 
-): HomeRecyclerItem
+)

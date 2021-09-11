@@ -6,4 +6,6 @@
     <string name="title_consult">상담방</string>
     <string name="title_diagnosis">비대면진료</string>
     <string name="title_profile">프로필</string>
+
+    <string formatted="false" name="answer_cnt">답변 %d</string>
 </resources>
