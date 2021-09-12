@@ -1,10 +1,10 @@
-package com.young.test2.home.retrofit
+package com.young.test2.retrofit
 
-import com.young.test2.home.data.ResponseHome
+import com.young.test2.data.ResponseHome
 import retrofit2.Call
 import retrofit2.http.GET
 
-interface HomeService {
+interface DocApiService {
     @GET("home.json")
     fun getHomeList(): Call<ResponseHome>
 }

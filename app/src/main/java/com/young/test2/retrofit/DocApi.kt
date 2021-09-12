@@ -1,4 +1,4 @@
-package com.young.test2.home.retrofit
+package com.young.test2.retrofit
 
 import com.google.gson.GsonBuilder
 import retrofit2.Retrofit
@@ -6,7 +6,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 
 
-object HomeApi {
+object DocApi {
     val BASE_URL = "https://docfriends.github.io/Docfriends_Android_Recruit/api/"
 
     private var _instance: Retrofit? = null
@@ -23,7 +23,7 @@ object HomeApi {
         return _instance!!
     }
 
-    fun getHomeService(): HomeService{
-        return getInstance().create(HomeService::class.java)
+    fun getDocService(): DocApiService {
+        return getInstance().create(DocApiService::class.java)
     }
 }
