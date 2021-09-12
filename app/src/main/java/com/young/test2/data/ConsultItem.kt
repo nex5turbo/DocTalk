@@ -21,7 +21,7 @@ data class ConsultItem(
     var answerCnt: Int? = null,
 
     @SerializedName("tagList")
-    var tagList: List<DocTag>? = null,
+    var tagList: ArrayList<DocTag>? = null,
 
     var regDateString: String? = null,
 

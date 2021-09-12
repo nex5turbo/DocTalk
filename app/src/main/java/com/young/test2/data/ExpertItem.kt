@@ -12,7 +12,7 @@ data class ExpertItem(
     var profileImagePath: String? = null,
 
     @SerializedName("tagList")
-    var tagList: List<DocTag>? = null,
+    var tagList: ArrayList<DocTag>? = null,
 
     @SerializedName("typeName")
     var typeName: String? = null,

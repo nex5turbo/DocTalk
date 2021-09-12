@@ -7,6 +7,7 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners
 import com.young.test2.data.HomeRecyclerItem
 import com.young.test2.data.CompanyItem
+import com.young.test2.data.DocTag
 import com.young.test2.data.ExpertItem
 import com.young.test2.utils.Constants.NO_IMAGE_URL
 
@@ -36,6 +37,15 @@ object BindingAdapter {
             rv.adapter = CompanyRecyclerAdapter()
         }
         (rv.adapter as CompanyRecyclerAdapter).setData(items)
+    }
+
+    @BindingAdapter("tag_items")
+    @JvmStatic
+    fun loadTagItems(rv: RecyclerView, items: ArrayList<DocTag>) {
+        if (rv.adapter == null) {
+            rv.adapter = TagRecyclerAdapter()
+        }
+        (rv.adapter as TagRecyclerAdapter).setData(items)
     }
 
     @BindingAdapter("image_url", "radius")

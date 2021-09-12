@@ -18,20 +18,39 @@
             android:layout_height="wrap_content"
 
             android:layout_alignParentTop="true"
-            android:layout_margin="16dp"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="4dp"
 
             android:text="@{data.title}"
             android:textStyle="bold"
             android:textSize="18sp"
+            android:textColor="@color/black"
             android:ellipsize="end"
             android:maxLines="1"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/consultTagRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/consultTitleTextView"
+
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginBottom="16dp"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+
+            app:tag_items="@{data.tagList}"/>
+
         <TextView
             android:id="@+id/consultContentTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_marginHorizontal="16dp"
-            android:layout_below="@id/consultTitleTextView"
+            android:layout_below="@id/consultTagRecyclerView"
 
             android:text="@{data.content}"
             android:maxLines="3"

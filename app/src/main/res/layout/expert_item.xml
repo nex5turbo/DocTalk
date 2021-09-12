@@ -37,13 +37,27 @@
             android:textColor="@color/black"
             android:text="@{@string/expert_name(data.name, data.typeName)}"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/expertTagRecyclerView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/expertDoctorNameTextView"
+            android:layout_centerHorizontal="true"
+
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="horizontal"
+
+            app:tag_items="@{data.tagList}"
+            />
+
         <TextView
             android:id="@+id/expertCompanyNameTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
 
             android:layout_centerHorizontal="true"
-            android:layout_below="@id/expertDoctorNameTextView"
+            android:layout_below="@id/expertTagRecyclerView"
 
             android:layout_marginVertical="10dp"
 

@@ -12,4 +12,5 @@
     <color name="dark_green">#FF036100</color>
 
     <color name="gray">#FFEAEAEA</color>
+    <color name="tag_background">#F6F6F6</color>
 </resources>
