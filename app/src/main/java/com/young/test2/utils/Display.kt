@@ -4,11 +4,19 @@ import android.content.Context
 import android.util.DisplayMetrics
 
 object Display {
-    lateinit var dm: DisplayMetrics
+    var dm: DisplayMetrics? = null
+
+    private var _deviceWidth = -1
+    val deviceWidth: Int get() = _deviceWidth
+
+    private var _deviceHeight = -1
+    val deviceHeight: Int get() = _deviceHeight
+
     fun initDM(context: Context) {
         dm = context.resources.displayMetrics
-    }
+        _deviceWidth = dm!!.widthPixels
+        _deviceHeight = dm!!.heightPixels
 
-    fun getWidth(): Int = dm.widthPixels
-    fun getHeight(): Int = dm.heightPixels
+        dm = null
+    }
 }

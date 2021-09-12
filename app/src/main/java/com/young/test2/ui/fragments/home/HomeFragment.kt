@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.ViewModelProvider
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.young.test2.databinding.FragmentHomeBinding
@@ -16,8 +15,8 @@ class HomeFragment: Fragment() {
     val binding: FragmentHomeBinding get() = _binding
     val viewModel: HomeFragmentViewModel by
         lazy{ ViewModelProvider(requireActivity()).get(HomeFragmentViewModel::class.java) }
-
-    val refeshListener = SwipeRefreshLayout.OnRefreshListener {
+    
+    private val refreshListener = SwipeRefreshLayout.OnRefreshListener {
         viewModel.getList()
     }
     val TAG = "HomeFragment"
@@ -31,7 +30,7 @@ class HomeFragment: Fragment() {
         _binding.viewModel = viewModel
         _binding.lifecycleOwner = viewLifecycleOwner
 
-        _binding.homeRefreshLayout.setOnRefreshListener(refeshListener)
+        _binding.homeRefreshLayout.setOnRefreshListener(refreshListener)
 
         viewModel.homeItemList.observe(viewLifecycleOwner, {
             _binding.homeRefreshLayout.isRefreshing = false

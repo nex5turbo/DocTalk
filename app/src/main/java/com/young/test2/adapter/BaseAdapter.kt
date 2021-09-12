@@ -7,12 +7,12 @@ import androidx.databinding.ViewDataBinding
 import androidx.recyclerview.widget.RecyclerView
 
 abstract class BaseAdapter<
-        I: Any,
+        Item: Any,
         B: ViewDataBinding>(
             private val layoutId: Int
-        ): RecyclerView.Adapter<BaseAdapter<I, B>.MyViewHolder>() {
+        ): RecyclerView.Adapter<BaseAdapter<Item, B>.MyViewHolder>() {
 
-    var items: ArrayList<I> = arrayListOf()
+    var items: ArrayList<Item> = arrayListOf()
     lateinit var binding: B
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
@@ -28,7 +28,7 @@ abstract class BaseAdapter<
         return items.size
     }
 
-    fun setData(data: ArrayList<I>) {
+    fun setData(data: ArrayList<Item>) {
         items = data
         notifyDataSetChanged()
     }

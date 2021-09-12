@@ -9,23 +9,15 @@ import com.young.test2.data.CompanyList
 import com.young.test2.data.ExpertList
 import com.young.test2.data.HomeRecyclerItem
 import com.young.test2.repository.RemoteDataSourceImpl
+import com.young.test2.ui.fragments.BaseFragmentViewModel
 import kotlin.collections.ArrayList
 
-class HomeFragmentViewModel: ViewModel(){
+class HomeFragmentViewModel: BaseFragmentViewModel(){
     private val repository = RemoteDataSourceImpl()
 
     private var _homeItemList: MutableLiveData<ArrayList<HomeRecyclerItem>> =
         MutableLiveData(arrayListOf())
     val homeItemList: LiveData<ArrayList<HomeRecyclerItem>> get() = _homeItemList
-
-    private var _pbVisibility: MutableLiveData<Int> = MutableLiveData(View.INVISIBLE)
-    val pbVisibility: LiveData<Int> get() = _pbVisibility
-
-    private var _noResultVisibility: MutableLiveData<Int> = MutableLiveData(View.INVISIBLE)
-    val noResultVisibility: LiveData<Int> get() = _noResultVisibility
-
-    private var _errorVisibility: MutableLiveData<Int> = MutableLiveData(View.INVISIBLE)
-    val errorVisibility: LiveData<Int> get() = _errorVisibility
 
     init {
         getList()
