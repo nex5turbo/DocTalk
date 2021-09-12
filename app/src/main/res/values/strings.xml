@@ -14,4 +14,9 @@
 
     <string formatted="false" name="company_address">%s %s</string>
     <string name="company_title">근처 의료기관</string>
+
+    <string formatted="false" name="tag_name">#%s</string>
+
+    <string name="no_result">검색결과가 없습니다.</string>
+    <string name="api_error">인터넷 연결 상태를 확인해주세요.</string>
 </resources>
