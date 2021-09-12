@@ -4,7 +4,7 @@
     <data>
         <variable
             name="data"
-            type="com.young.test2.home.data.ConsultItem" />
+            type="com.young.test2.data.ConsultItem" />
     </data>
     <RelativeLayout
         android:layout_marginBottom="8dp"
@@ -16,40 +16,51 @@
             android:id="@+id/consultTitleTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+
+            android:layout_alignParentTop="true"
+            android:layout_margin="16dp"
+
             android:text="@{data.title}"
             android:textStyle="bold"
             android:textSize="18sp"
             android:ellipsize="end"
-            android:maxLines="1"
-            android:layout_alignParentTop="true"
-            android:layout_margin="16dp"/>
+            android:maxLines="1"/>
         <TextView
             android:id="@+id/consultContentTextView"
-            android:layout_below="@id/consultTitleTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="16dp"
+            android:layout_below="@id/consultTitleTextView"
+
             android:text="@{data.content}"
             android:maxLines="3"
-            android:layout_marginHorizontal="16dp"
             android:ellipsize="end"/>
         <TextView
             android:id="@+id/consultAnswerCntTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
+            android:layout_below="@id/consultContentTextView"
+            android:layout_alignParentStart="true"
+
             android:layout_margin="16dp"
+
             android:text="@{@string/answer_cnt(data.answerCnt)}"
             android:textStyle="bold"
             android:textColor="@color/main_green"
-            android:layout_below="@id/consultContentTextView"
-            android:layout_alignParentStart="true"/>
+/>
 
         <TextView
             android:id="@+id/consultDateTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_margin="16dp"
+
             android:layout_below="@id/consultContentTextView"
             android:layout_alignParentEnd="true"
+
             android:text="@{data.regDateString}"/>
 
     </RelativeLayout>

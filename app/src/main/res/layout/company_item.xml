@@ -4,21 +4,48 @@
     <data>
         <variable
             name="data"
-            type="com.young.test2.home.data.CompanyItem" />
+            type="com.young.test2.data.CompanyItem" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout
+    <RelativeLayout
         android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-
-        <TextView
+        <ImageView
+            android:id="@+id/companyImageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@{data.companyName}"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+
+            app:image_url="@{data.introPath}"
+            app:radius="@{data.radius}"/>
+
+        <TextView
+            android:id="@+id/comapnyNameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/companyImageView"
+
+            android:text="@{data.companyName}"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/companyAddrTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/comapnyNameTextView"
+
+            android:layout_marginBottom="12dp"
+
+            android:text="@{@string/company_address(data.address, data.addressEtc)}"/>
+
+
+    </RelativeLayout>
 </layout>

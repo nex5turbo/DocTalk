@@ -8,4 +8,10 @@
     <string name="title_profile">프로필</string>
 
     <string formatted="false" name="answer_cnt">답변 %d</string>
+
+    <string formatted="false" name="expert_name">%s(%s)</string>
+    <string name="expert_title">활동이 많은 전문가</string>
+
+    <string formatted="false" name="company_address">%s %s</string>
+    <string name="company_title">근처 의료기관</string>
 </resources>

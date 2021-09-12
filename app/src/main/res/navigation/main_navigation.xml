@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/navigation_home">
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.young.test2.ui.fragments.home.HomeFragment"
+        android:label="NavigationHome"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/navigation_expert"
+        android:name="com.young.test2.ui.fragments.expert.ExpertFragment"
+        android:label="NavigationExpert"
+        tools:layout="@layout/fragment_expert"/>
+    <fragment
+        android:id="@+id/navigation_consult"
+        android:name="com.young.test2.ui.fragments.consult.ConsultFragment"
+        android:label="NavigationConsult"
+        tools:layout="@layout/fragment_consult" />
+    <fragment
+        android:id="@+id/navigation_diagnosis"
+        android:name="com.young.test2.ui.fragments.diagnosis.DiagnosisFragment"
+        android:label="NavigationDiagnosis"
+        tools:layout="@layout/fragment_diagnosis" />
+    <fragment
+        android:id="@+id/navigation_profile"
+        android:name="com.young.test2.ui.fragments.profile.ProfileFragment"
+        android:label="NavigationProfile"
+        tools:layout="@layout/fragment_profile" />
+
+
+</navigation>
