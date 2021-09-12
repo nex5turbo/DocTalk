@@ -33,14 +33,8 @@ class MainActivity : AppCompatActivity() {
 
         _binding.bottomNavigationView.setupWithNavController(navController)
 
-        navController.addOnDestinationChangedListener { controller, destination, arguments ->
-            when(destination.id) {
-                R.id.navigation_home -> viewModel.setTitle(getString(R.string.title_home))
-                R.id.navigation_profile -> viewModel.setTitle(getString(R.string.title_profile))
-                R.id.navigation_consult -> viewModel.setTitle(getString(R.string.title_consult))
-                R.id.navigation_expert -> viewModel.setTitle(getString(R.string.title_expert))
-                R.id.navigation_diagnosis -> viewModel.setTitle(getString(R.string.title_diagnosis))
-            }
+        navController.addOnDestinationChangedListener { _, it, _ ->
+            viewModel.setTitle(it.label.toString())
         }
     }
 }

@@ -5,7 +5,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import com.young.test2.databinding.FragmentExpertBinding
 import com.young.test2.databinding.FragmentProfileBinding
 
 class ProfileFragment: Fragment() {
