@@ -1,4 +1,4 @@
-package com.young.test2.home.data
+package com.young.test2.data
 
 import com.google.gson.annotations.SerializedName
 import java.text.SimpleDateFormat

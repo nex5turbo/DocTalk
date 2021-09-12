@@ -1,9 +1,14 @@
-package com.young.test2.home.recyclerview
+package com.young.test2.adapter
 
+import android.widget.ImageView
 import androidx.databinding.BindingAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.young.test2.home.data.HomeRecyclerItem
-import com.young.test2.home.data.*
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners
+import com.young.test2.data.HomeRecyclerItem
+import com.young.test2.data.CompanyItem
+import com.young.test2.data.ExpertItem
+import com.young.test2.utils.Constants.NO_IMAGE_URL
 
 object BindingAdapter {
     @BindingAdapter("items")
@@ -33,9 +38,19 @@ object BindingAdapter {
         (rv.adapter as CompanyRecyclerAdapter).setData(items)
     }
 
-//    @BindingAdapter("image_url")
-//    @JvmStatic
-//    fun loadImage(iv: ImageView, imageUrl: String) {
-//
-//    }
+    @BindingAdapter("image_url", "radius")
+    @JvmStatic
+    fun loadImage(iv: ImageView, imageUrl: String?, radius: Int) {
+        if (!imageUrl.isNullOrEmpty()) {
+            Glide.with(iv.context)
+                .load(imageUrl)
+                .transform(RoundedCorners(radius))
+                .into(iv)
+        } else {
+            Glide.with(iv.context)
+                .load(NO_IMAGE_URL)
+                .transform(RoundedCorners(radius))
+                .into(iv)
+        }
+    }
 }

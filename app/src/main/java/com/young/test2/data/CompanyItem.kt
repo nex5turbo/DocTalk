@@ -1,4 +1,4 @@
-package com.young.test2.home.data
+package com.young.test2.data
 
 import com.google.gson.annotations.SerializedName
 
@@ -13,6 +13,7 @@ data class CompanyItem(
     var companyName: String? = null,
 
     @SerializedName("introPath")
-    var introPath: String? = null
+    var introPath: String? = null,
 
+    val radius: Int = 1
 )

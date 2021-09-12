@@ -1,4 +1,4 @@
-package com.young.test2.home.data
+package com.young.test2.data
 import com.google.gson.annotations.SerializedName
 
 data class ExpertItem(
@@ -15,6 +15,8 @@ data class ExpertItem(
     var tagList: List<DocTag>? = null,
 
     @SerializedName("typeName")
-    var typeName: String? = null
+    var typeName: String? = null,
+
+    val radius: Int = 30
 
 )

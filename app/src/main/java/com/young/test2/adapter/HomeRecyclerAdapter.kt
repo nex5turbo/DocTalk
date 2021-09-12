@@ -1,16 +1,13 @@
-package com.young.test2.home.recyclerview
+package com.young.test2.adapter
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
-import com.young.test2.R
 import com.young.test2.databinding.*
-import com.young.test2.home.data.HomeRecyclerItem
-import com.young.test2.home.data.CompanyList
-import com.young.test2.home.data.ConsultItem
-import com.young.test2.home.data.ExpertList
+import com.young.test2.data.HomeRecyclerItem
+import com.young.test2.data.CompanyList
+import com.young.test2.data.ConsultItem
+import com.young.test2.data.ExpertList
 import com.young.test2.utils.Constants.COMPANY_TYPE
 import com.young.test2.utils.Constants.CONSULT_TYPE
 import com.young.test2.utils.Constants.EXPERT_TYPE
